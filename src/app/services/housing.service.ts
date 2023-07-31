@@ -1,4 +1,4 @@
-import { HousingLocation } from './housinglocation';
+import { HousingLocation } from '../housinglocation';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -26,5 +26,5 @@ export class HousingService {
       `Homes Application received: firstName:${firstName}, lastName: ${lastName}, email:${email}}`
     );
   }
-  
+
 }

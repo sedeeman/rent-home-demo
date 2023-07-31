@@ -1,15 +1,18 @@
 import { browser, element, by, logging } from 'protractor';
+import { AppPage } from './app.po';
 
-describe('first-app-lesson-01 app', () => {
+describe('Rent Home Demo Web', () => {
+
+  const page = new AppPage();
 
   beforeEach(() => browser.get(''));
 
   it('should display correct title', async () => {
-    expect(await element.all(by.css('h1')).get(0).getText()).toEqual('Hello world!');
+    const text = await page.getTitleText();
+    expect(text).toBe('Rent Homes');
   });
 
   afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,

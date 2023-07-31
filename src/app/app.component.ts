@@ -1,16 +1,16 @@
-import { HomeComponent } from './home/home.component';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule],
+  imports: [RouterModule],
   template: `
   <main>
+    <h2>Rent Homes</h2>
     <a [routerLink]="['/']">
       <header class="brand-name">
-        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+        <img class="brand-logo" src="/assets/logo.svg" alt="homes" aria-hidden="true">
       </header>
     </a>
     <section class="content">
